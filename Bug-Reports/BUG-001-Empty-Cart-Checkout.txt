@@ -1,0 +1,39 @@
+Bug Report — BUG-001
+
+Project: SauceDemo  
+Bug Title: Application allows checkout completion with an empty cart
+
+Environment: Web browser — Windows PC  
+Module: Shopping Cart / Checkout  
+Bug Type: Functional  
+Severity: To be assessed  
+Priority: To be assessed  
+Status: Needs Investigation
+
+Preconditions
+- User is logged in.
+- The shopping cart is empty.
+
+ Steps to Reproduce
+1. Add a product to the cart.
+2. Remove the product.
+3. Proceed to checkout.
+4. Enter the required customer details.
+5. Continue to the Checkout Overview page.
+6. Verify that no products are listed.
+7. Click Finish.
+8. Click Generate PDF Order.
+
+Expected Result
+The application should prevent checkout completion when the cart contains no products.
+
+Actual Result
+The application displayed an order confirmation even though no products were listed. The generated PDF contained no products, and the total cost and tax were $0.00.
+
+Evidence
+- Screenshot of the empty checkout overview.
+- Screenshot of the order confirmation.
+- Generated PDF showing no products and a $0.00 total.
+
+Notes
+Observed during manual testing of the SauceDemo demo application. The intended behavior must be confirmed before classifying this as a confirmed defect.

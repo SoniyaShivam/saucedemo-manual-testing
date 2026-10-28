@@ -1,0 +1,39 @@
+SauceDemo — Test Execution Summary
+
+Project: SauceDemo E-commerce Demo Website  
+Testing Type: Manual Functional Testing  
+Tester: Soniya Sadasivam  
+Execution Date:28 October 2026
+
+Test Execution Results
+
+| T C ID | Test Scenario                 | Result              |
+|--------|-------------------------------|---------------------|
+| TC-001 | Login with valid credentials  | PASS                |
+| TC-002 | Add product to cart           | PASS                |
+| TC-003 | Remove product from cart      | PASS                |
+| TC-004 | Checkout with an empty cart   | NEEDS INVESTIGATION |
+| TC-005 | Checkout with a valid product | PASS                |
+
+Summary
+
+- Total test cases executed: 5
+- Passed: 4
+- Failed: 0 confirmed
+- Needs investigation: 1
+
+Key Observation
+
+The application allowed checkout completion with an empty cart. The generated PDF contained no products and showed a total cost and tax of $0.00. This behavior requires further investigation before being classified as a confirmed defect.
+
+Scope of Testing
+
+- Login functionality
+- Shopping cart operations
+- Checkout flow
+- Order confirmation
+- Generated order PDF validation
+
+Conclusion
+
+The core login, cart, and valid checkout flows behaved as expected during this test session. One potential issue was identified in the empty-cart checkout flow and requires further investigation.

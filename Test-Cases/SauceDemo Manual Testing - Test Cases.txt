@@ -1,0 +1,139 @@
+Project: SauceDemo E-commerce website
+Website: https://www.saucedemo.com/
+Testing Type: Manual Testing
+Tester: Soniya Sadasivam
+
+TC-001: Login with Valid Credentials
+
+Objective: Verify that a user can log in using valid credentials. 
+Precondition: The SauceDemo login page is open.
+
+Test Data:
+
+> Username : standard_user
+> Password : secret_sauce
+
+Test Steps:
+
+1. Open the SauceDemo website.
+2. Enter the valid username.
+3. Enter the valid password.
+4. Click the login button.
+
+Expected Result: The user should log in successfully and rach the inventory page.
+
+Actual Result: Login was successful, and the inventory page was displayed.
+
+Status: PASS
+
+------------------------------------------------------------------
+
+TC-002: Add Product to Cart
+
+Objective: Verify that a user can add a product to the shopping cart.
+
+Precondition: That user is logged in and the inventory page is displayed.
+
+Test Steps:
+
+1.Select a product
+2.Click the add to cart button
+3. Observe the button text and cart badge.
+4. Open the cart and verify the selected product.
+
+Expected Result:
+
+> The button text should change to Remove.
+> The cart badge should show the updated item count.
+> The selected product should appear in the cart.
+
+Actual Result:
+
+> The button text changed to Remove.
+> The cart count increased.
+> The selected product appeared in the cart.
+
+Status: PASS
+
+
+------------------------------------------------------------------
+
+TC-003: Remove Product from Cart
+
+Objective: Verify that a user can remove a product from the shopping cart.
+
+Precondition: The user is logged in, and a product has been added to the cart.
+
+Test Steps:
+1. Open the shopping cart.
+2. Verify that the selected product is present.
+3. Click the Remove button.
+4. Verify that the product is removed.
+
+Expected Result: The selected product should be removed from the shopping cart.
+
+Actual Result: The product was removed successfully after clicking Remove.
+
+Status: PASS
+
+
+------------------------------------------------------------------
+
+---
+
+TC-004: Checkout with an Empty Cart
+
+Objective: Verify that the application prevents checkout when the cart contains no products.
+
+Precondition: The user is logged in, and the cart is empty.
+
+Test Steps:
+1. Add a product to the cart.
+2. Remove the product.
+3. Proceed to checkout.
+4. Enter the required first name, last name, and postal code.
+5. Continue to the Checkout Overview page.
+6. Verify that no products are listed.
+7. Click Finish.
+8. Click Generate PDF Order on the confirmation page.
+
+Expected Result: The application should prevent order completion when the cart is empty.
+
+Actual Result: The order confirmation page appeared even though no products were listed. The generated PDF contained no products, and the total cost and tax were $0.00.
+
+Status: NEEDS INVESTIGATION
+
+Note: This is an observed potential defect in the demo application. Confirm the intended behavior before reporting it as a confirmed bug.
+
+----------------------------------------------------------------------
+
+---
+
+TC-005: Checkout with a Valid Product
+
+Objective: Verify that a user can complete checkout with a valid product in the cart.
+
+Precondition: The user is logged in, and the inventory page is displayed.
+
+Test Steps:
+1. Add a product to the cart.
+2. Open the shopping cart.
+3. Proceed to checkout.
+4. Enter the first name, last name, and postal code.
+5. Continue to the Checkout Overview page.
+6. Verify the product name and price.
+7. Click Finish.
+8. Verify the order confirmation message.
+9. Click Generate PDF Order and inspect the downloaded PDF.
+
+Expected Result:
+- The selected product and its price should be displayed correctly.
+- The order should be completed successfully.
+- The generated PDF should contain the correct product name, price, tax, and final total.
+
+Actual Result:
+- The order was confirmed successfully.
+- The product name and price were correct.
+- The PDF displayed the correct product name, price, tax, and final total.
+
+Status: PASS
